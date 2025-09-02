@@ -29,5 +29,6 @@ Aclaración: los porcentajes se calculan como la cantidad de votos que cumplen l
 dividido el total de votos emitidos en la mesa, establecimiento, barrio o localidad multiplicado
 por 10.
 
+Composite
 
 

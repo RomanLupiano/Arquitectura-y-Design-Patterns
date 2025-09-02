@@ -18,3 +18,23 @@ En cada tablero, se debe poder buscar:
 - Todas las fichas que ocupen más de 4 lugares
 - Todas las fichas que tengan una fortaleza mayor a 5
 - Combinaciones lógicas de los anteriores
+
+## Análisis de Patrones de diseño:  
+Para los distitos tipos de búsquedas, se usó el patrón Strategy. 
+> Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+Pudiendo generar combinaciones lógicas con el implementado CriterioAND o el posible a implementar CriterioOR.  
+
+Para las distintas fichas y sus distitas formas de calcular la fortaleza, el poder o el espacio, hay dos alternativas:  
+
+- Usar Strategy, haciendo una estrategia para cada atributo y usar combinaciones lógicas para fichas más especiales.
+- Usar Decorator, con decoradores se puede modificar de forma externa y acumulable la manera de obtener los atributos de una ficha.
+
+Para la solución elegí usar Decorator porque permite combinar lógica de cálculo o incluso reemplazarla por completo. Así, si en el futuro existe una ficha "Poderosa" que duplica el poder, es más facil implementarla con Decorator al tener que agregarle solo una capa más que haga "return fichaEnvueltа.getPoder() * 2".
+> Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+
+Extra: Patrón Prototype
+> Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
+Con este patrón se pueden clonar facilmente fichas, incluso las que están envueltas en multiples decoradores. Para esto se implementa la clonación de manera recursiva: la capa de decoración debe de saber cómo clonarse a sí misma y pedirle al objeto que envuelve que también se clone.
+
+---
+![Alt text](UMLdeClasesCandy%20.png "Optional Title")
