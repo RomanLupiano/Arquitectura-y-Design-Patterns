@@ -37,4 +37,4 @@ Extra: Patrón Prototype
 Con este patrón se pueden clonar facilmente fichas, incluso las que están envueltas en multiples decoradores. Para esto se implementa la clonación de manera recursiva: la capa de decoración debe de saber cómo clonarse a sí misma y pedirle al objeto que envuelve que también se clone.
 
 ---
-![Alt text](UMLdeClasesCandy%20.png "Optional Title")
+![UML de Clases de la implementación de Candy](UMLdeClasesCandy.png "UML de Clases de la implementación de Candy")

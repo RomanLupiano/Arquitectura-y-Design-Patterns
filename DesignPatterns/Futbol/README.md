@@ -16,3 +16,10 @@ total de alquileres de esa cancha.
 primero los que tienen las cuotas pagas, ordenados alfabéticamente y luego los
 morosos, también ordenados alfabéticamente.
 - e) Cualquier combinación lógica de búsquedas.
+
+
+## Análisis de Patrones de diseño:  
+Para las búsquedas de socios se realiza un Strategy + Composite para los criterios combinados.
+Para la forma de ordenar los resultados de las búsquedas, se utiliza la interfaz Comparator y se realiza un Strategy + Composite para los ordenamientos compuestos.
+
+![UML de Clases de la implementación de Futbol](UMLdeClasesFutbol.png "UML de Clases de la implementación de Futbol")
